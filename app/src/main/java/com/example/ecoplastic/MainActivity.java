@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -87,10 +88,8 @@ public class MainActivity extends AppCompatActivity implements MainCallbacks{
         }
         if (sender.equals("RESULTADO")) {
             try {
-                ft = getSupportFragmentManager().beginTransaction();
-                ft.remove(fragment_r);
-                ft.commit();
-
+                Intent intent = new Intent(this.getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
             } catch (Exception e) {
                 Log.e("ERROR", "onStrFromFragToMain " + e.getMessage());
             }

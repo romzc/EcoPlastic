@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_bg"
+    android:divider="@drawable/empty_tall_divider"
+    android:showDividers="">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vasos"
+        android:textAlignment="center"
+        android:textSize="36sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Seleccion el tamaño"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioGroup
+            android:id="@+id/cup_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:divider="@drawable/empty_tall_divider"
+            android:showDividers="middle">
+
+            <RadioButton
+                android:id="@+id/first_radio_cup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 - 100 ml" />
+
+            <RadioButton
+                android:id="@+id/second_radio_cup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100 - 300 ml" />
+
+            <RadioButton
+                android:id="@+id/third_radio_cup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="300 - 500 ml" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cantidad"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:divider="@drawable/empty_tall_divider"
+        android:showDividers="middle">
+
+        <Button
+            android:id="@+id/minus_cup_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/amount_cup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/plus_cup_button"
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:text="+" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:text="Guardar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:divider="@drawable/empty_tall_divider"
+        android:showDividers="middle">
+
+        <Button
+            android:id="@+id/discard_cup_button"
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:text="⨉" />
+
+        <Button
+            android:id="@+id/save_cup_button"
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:text="✓" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg"
+    android:divider="@drawable/empty_tall_divider"
+    android:showDividers="middle">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Botellas"
+        android:textAlignment="center"
+        android:textSize="36sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Seleccion el tamaño"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioGroup
+            android:id="@+id/bottles_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:divider="@drawable/empty_tall_divider"
+            android:showDividers="middle">
+
+            <RadioButton
+                android:id="@+id/first_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 - 200 ml" />
+
+            <RadioButton
+                android:id="@+id/second_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200 - 500 ml" />
+
+            <RadioButton
+                android:id="@+id/third_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500 - 1000 ml" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cantidad"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:divider="@drawable/empty_tall_divider"
+        android:showDividers="middle">
+
+        <Button
+            android:id="@+id/minus_bottle_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/amount_bottle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/plus_bottle_button"
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:text="+" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:text="Guardar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:divider="@drawable/empty_tall_divider"
+        android:showDividers="middle">
+
+        <Button
+            android:id="@+id/discard_bottles_button"
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:text="⨉" />
+
+        <Button
+            android:id="@+id/save_bottles_button"
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:text="✓" />
+
+    </LinearLayout>
+
+</LinearLayout>

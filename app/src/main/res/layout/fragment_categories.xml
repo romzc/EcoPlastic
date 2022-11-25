@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.ecoplastic.CategoriesFragment">
+    <TextView
+        android:id="@+id/text_view_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginTop="10dp"
+        android:text="EcoPlastic"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <GridLayout
+        android:id="@+id/constraint_layout_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:columnCount="1"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:divider="@drawable/empty_tall_divider">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:divider="@drawable/empty_tall_divider">
+
+            <Button
+                android:id="@+id/bottle_home_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:minHeight="120dp"
+                android:minWidth="120dp"
+                android:drawableTop="@drawable/bottle_juice_icon"
+                android:outlineSpotShadowColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:text="Botellas"/>
+            <Button
+                android:id="@+id/cups_home_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:minHeight="120dp"
+                android:minWidth="120dp"
+                android:drawableTop="@drawable/cola_cup_icon"
+                android:outlineSpotShadowColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:text="Vasos" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:divider="@drawable/empty_tall_divider"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/bag_home_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="120dp"
+                android:minWidth="120dp"
+                android:textAllCaps="false"
+                android:drawableTop="@drawable/ic_baseline_shopping_bag_24"
+                android:outlineSpotShadowColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:text="Bolsas"/>
+            <Button
+                android:id="@+id/pack_home_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="120dp"
+                android:minWidth="120dp"
+                android:textAllCaps="false"
+                android:drawableTop="@drawable/cup_milk_icon"
+                android:outlineSpotShadowColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:text="Paquetes" />
+
+        </LinearLayout>
+
+
+    </GridLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/create_element_floating_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:backgroundTint="#BCB8B8"
+        app:tint="@color/black"
+        app:layout_anchor="@id/constraint_layout_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

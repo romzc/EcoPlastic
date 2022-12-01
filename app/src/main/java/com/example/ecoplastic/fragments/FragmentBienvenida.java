@@ -1,4 +1,4 @@
-package com.example.ecoplastic;
+package com.example.ecoplastic.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -11,23 +11,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.ecoplastic.FragmentCallbacks;
+import com.example.ecoplastic.MainCallbacks;
+import com.example.ecoplastic.R;
+
 public class FragmentBienvenida extends Fragment implements FragmentCallbacks {
+
     private MainCallbacks mainCallbacks;
-
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
 
     public FragmentBienvenida() {
     }
 
-    public static FragmentBienvenida newInstance(String param1, String param2) {
+    public static FragmentBienvenida newInstance() {
         FragmentBienvenida fragment = new FragmentBienvenida();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -35,10 +32,6 @@ public class FragmentBienvenida extends Fragment implements FragmentCallbacks {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override

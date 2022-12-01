@@ -8,14 +8,17 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.ecoplastic.databinding.ActivityHomeBinding;
+import com.example.ecoplastic.fragments.FourthFragment;
+import com.example.ecoplastic.fragments.FragmentCategories;
+import com.example.ecoplastic.fragments.FragmentCreateElement;
+import com.example.ecoplastic.fragments.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends AppCompatActivity {
 
     HomeFragment homeFragment = new HomeFragment();
-    CreateElementFragment createElementFragment = new CreateElementFragment();
-    CategoriesFragment categoriesFragment = new CategoriesFragment();
+    FragmentCreateElement createElementFragment = new FragmentCreateElement();
+    FragmentCategories fragmentCategories = new FragmentCategories();
     FourthFragment fourthFragment = new FourthFragment();
     BottomNavigationView navigation;
 
@@ -41,7 +44,7 @@ public class HomeActivity extends AppCompatActivity {
                     loadFragment(createElementFragment);
                     return true;
                 case R.id.thirdFragment:
-                    loadFragment(categoriesFragment);
+                    loadFragment(fragmentCategories);
                     return true;
                 case R.id.fourthFragment:
                     loadFragment(fourthFragment);

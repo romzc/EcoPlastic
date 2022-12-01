@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
@@ -51,9 +52,19 @@ public class GraficoResultados extends View {
         float cuartoY = mHeight/4;
 
         float altura = (medioY + cuartoY) - (medioY - cuartoY);
+        float ancho = (medioX + cuartoX) - (medioX - cuartoX);
 
-        String[] colores = {"#00FFE0","#D2FF00","#FFD400","#FF0000"};
+        String[] colores = {"#00FFE0","#D2FF00","#FFD400","#FF0000","#C4F8FF"};
         String[] niveles = {"BAJO","MODERADO","ALTO","EXTREMO"};
+
+        mDialPaint.setColor(Color.parseColor(colores[4]));
+        Path path = new Path();
+        path.moveTo(medioX - cuartoX - (ancho * 20/100), medioX - cuartoX - (altura * 20/100));
+        path.lineTo(medioX + cuartoX + (ancho * 20/100), medioX - cuartoX - (altura * 20/100));
+        path.lineTo(medioX + cuartoX + (ancho * 5/100), medioY + cuartoY + (altura * 5/100));
+        path.lineTo(medioX - cuartoX - (ancho * 5/100), medioY + cuartoY + (altura * 5/100));
+        path.lineTo(medioX - cuartoX - (ancho * 20/100), medioX - cuartoX - (altura * 20/100));
+        canvas.drawPath(path, mDialPaint);
 
 
         mDialPaint.setColor(Color.parseColor(colores[valorTotal-1]));

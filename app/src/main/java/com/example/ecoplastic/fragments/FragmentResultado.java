@@ -1,4 +1,4 @@
-package com.example.ecoplastic;
+package com.example.ecoplastic.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -6,13 +6,14 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 
+import com.example.ecoplastic.FragmentCallbacks;
+import com.example.ecoplastic.MainCallbacks;
+import com.example.ecoplastic.R;
 import com.example.ecoplastic.ViewMetrics.GraficoResultados;
 
 public class FragmentResultado extends Fragment implements FragmentCallbacks {

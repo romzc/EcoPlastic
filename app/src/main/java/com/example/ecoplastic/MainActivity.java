@@ -7,7 +7,12 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
+
+import com.example.ecoplastic.fragments.FragmentBienvenida;
+import com.example.ecoplastic.fragments.FragmentLogin;
+import com.example.ecoplastic.fragments.FragmentRegister;
+import com.example.ecoplastic.fragments.FragmentResultado;
+import com.example.ecoplastic.fragments.Fragment_CalculoHuella;
 
 public class MainActivity extends AppCompatActivity implements MainCallbacks{
     private Fragment_CalculoHuella fragment_c;

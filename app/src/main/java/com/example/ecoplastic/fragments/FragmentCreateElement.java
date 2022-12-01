@@ -1,4 +1,4 @@
-package com.example.ecoplastic;
+package com.example.ecoplastic.fragments;
 
 import android.os.Bundle;
 
@@ -7,19 +7,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
 
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 
+import com.example.ecoplastic.R;
 import com.example.ecoplastic.widgets.CheckboxWithEditText;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -27,10 +22,10 @@ import java.util.HashMap;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link CreateElementFragment#newInstance} factory method to
+ * Use the {@link FragmentCreateElement#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CreateElementFragment extends Fragment {
+public class FragmentCreateElement extends Fragment {
 
     private CheckboxWithEditText sizeS;
     private CheckboxWithEditText sizeM;
@@ -44,12 +39,12 @@ public class CreateElementFragment extends Fragment {
     private String itemSelectedAdapterCategory="None";
     private String categories[] = {"Drinks","Bottles", "Cupboard and Hygiene","Bags and film", "Pots, tubs, trays", "Other"};
 
-    public CreateElementFragment() {
+    public FragmentCreateElement() {
         // Required empty public constructor
     }
 
-    public static CreateElementFragment newInstance(String param1, String param2) {
-        CreateElementFragment fragment = new CreateElementFragment();
+    public static FragmentCreateElement newInstance(String param1, String param2) {
+        FragmentCreateElement fragment = new FragmentCreateElement();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;

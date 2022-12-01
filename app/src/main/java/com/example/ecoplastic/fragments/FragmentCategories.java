@@ -1,4 +1,4 @@
-package com.example.ecoplastic;
+package com.example.ecoplastic.fragments;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -19,23 +19,25 @@ import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.example.ecoplastic.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link CategoriesFragment#newInstance} factory method to
+ * Use the {@link FragmentCategories#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CategoriesFragment extends Fragment {
+public class FragmentCategories extends Fragment {
 
     private TextView cupText;
     private TextView bottleText;
     private TextView bagText;
     private TextView packText;
 
-    public CategoriesFragment() {}
+    public FragmentCategories() {}
 
     // TODO: Rename and change types and number of parameters
-    public static CategoriesFragment newInstance(String param1, String param2) {
-        return new CategoriesFragment();
+    public static FragmentCategories newInstance(String param1, String param2) {
+        return new FragmentCategories();
     }
 
     @Override

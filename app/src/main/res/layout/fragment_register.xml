@@ -17,8 +17,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenido"
-        android:textSize="40sp"
+        android:text="Registrarse"
+        android:textSize="36sp"
         android:textStyle="bold"
         android:layout_marginTop="-20dp"
         android:textColor="#000"/>
@@ -113,14 +113,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/setshape"
-        android:text="GO"
-        android:textColor="#fff"
+        android:textAllCaps="false"
+        android:text="Registrar"
+        android:textColor="@color/green_normal"
         tools:ignore="TouchTargetSizeCheck"
         app:backgroundTint="@null"/>
     <Button
         android:id="@+id/register_b_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="¿Ya estás registrado? LogIn"
         android:textColor="@color/black"
         android:backgroundTint="@color/green_light_2"/>

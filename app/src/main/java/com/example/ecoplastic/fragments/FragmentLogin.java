@@ -12,8 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.ecoplastic.FragmentCallbacks;
-import com.example.ecoplastic.MainCallbacks;
+import com.example.ecoplastic.callbacks.MainCallbacks;
 import com.example.ecoplastic.R;
 
 public class FragmentLogin extends Fragment {

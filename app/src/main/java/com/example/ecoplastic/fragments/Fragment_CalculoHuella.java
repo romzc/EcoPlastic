@@ -6,33 +6,24 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 
-import com.example.ecoplastic.FragmentCallbacks;
-import com.example.ecoplastic.MainCallbacks;
+import com.example.ecoplastic.callbacks.FragmentCallbacks;
+import com.example.ecoplastic.callbacks.MainCallbacks;
 import com.example.ecoplastic.R;
+import com.example.ecoplastic.widgets.EditTextButtons;
 
 public class Fragment_CalculoHuella extends Fragment implements FragmentCallbacks {
     private MainCallbacks mainCallbacks;
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
-
 
     public Fragment_CalculoHuella() {}
 
-    public static Fragment_CalculoHuella newInstance(String param1, String param2) {
+    public static Fragment_CalculoHuella newInstance() {
         Fragment_CalculoHuella fragment = new Fragment_CalculoHuella();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -40,20 +31,16 @@ public class Fragment_CalculoHuella extends Fragment implements FragmentCallback
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_calculo_huella, container, false);
-        EditText editTextNumber1 = view.findViewById(R.id.editTextNumber1);
-        EditText editTextNumber2 = view.findViewById(R.id.editTextNumber2);
-        EditText editTextNumber3 = view.findViewById(R.id.editTextNumber3);
-        EditText editTextNumber4 = view.findViewById(R.id.editTextNumber4);
-        EditText[] edits = {editTextNumber1,editTextNumber2,editTextNumber3,editTextNumber4};
+        EditTextButtons editTextNumber1 = view.findViewById(R.id.editTextNumber1);
+        EditTextButtons editTextNumber2 = view.findViewById(R.id.editTextNumber2);
+        EditTextButtons editTextNumber3 = view.findViewById(R.id.editTextNumber3);
+        EditTextButtons editTextNumber4 = view.findViewById(R.id.editTextNumber4);
+        EditTextButtons[] edits = {editTextNumber1,editTextNumber2,editTextNumber3,editTextNumber4};
 
         Button btn_calcular = view.findViewById(R.id.btn_calcular);
         btn_calcular.setOnClickListener(new View.OnClickListener() {
@@ -76,13 +63,13 @@ public class Fragment_CalculoHuella extends Fragment implements FragmentCallback
             throw new RuntimeException(context.toString()+"must implement FragmentCallbacks");
         }
     }
-    public int calcular(EditText[] edits){
+    public int calcular(EditTextButtons[] edits){
         int suma = 0;
-        String cad;
+        Integer cad;
         for(int val = 0; val < 4; val++){
-            cad = edits[val].getText().toString();
-            if (!TextUtils.isEmpty(cad))
-                suma += Integer.parseInt(cad);
+            cad = edits[val].getValue();
+            if (cad > 0)
+                suma += cad;
         }
         if(suma<10)
             return 1;
@@ -93,7 +80,15 @@ public class Fragment_CalculoHuella extends Fragment implements FragmentCallback
         else return 4;
     }
 
+
+    /**
+     * Metodos para manejar los enventos click.
+     * */
+
+
+
     @Override
     public void onMsgFromMainToFragment(String strValue) {
+
     }
 }

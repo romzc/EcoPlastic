@@ -1,4 +1,4 @@
-package com.example.ecoplastic;
+package com.example.ecoplastic.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.ecoplastic.R;
 import com.example.ecoplastic.fragments.FourthFragment;
 import com.example.ecoplastic.fragments.FragmentCategories;
 import com.example.ecoplastic.fragments.FragmentCreateElement;
@@ -28,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         navigation = findViewById(R.id.bottom_navigation_view);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        navigation.setOnItemSelectedListener(mOnNavigationItemSelectedListener);
 
         loadFragment(homeFragment);
     }

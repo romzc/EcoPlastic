@@ -2,6 +2,7 @@ package com.example.ecoplastic.widgets;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.text.InputType;
 import android.util.AttributeSet;
 import android.view.View;
@@ -57,6 +58,7 @@ public class CheckboxWithEditText extends LinearLayout {
         //attrs bottoms
         add.setImageResource(R.drawable.ic_baseline_add_circle_24);
         add.setColorFilter(ContextCompat.getColor(context,R.color.green_normal));
+        add.setBackgroundColor(Color.WHITE);
         subtract.setImageResource(R.drawable.ic_outline_remove_circle_24);
         subtract.setColorFilter(ContextCompat.getColor(context,R.color.green_normal));
         add.setEnabled(false);

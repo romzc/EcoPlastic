@@ -1,4 +1,4 @@
-package com.example.ecoplastic;
+package com.example.ecoplastic.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -8,13 +8,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.ecoplastic.R;
+import com.example.ecoplastic.activities.HomeActivity;
+import com.example.ecoplastic.callbacks.MainCallbacks;
 import com.example.ecoplastic.fragments.FragmentBienvenida;
 import com.example.ecoplastic.fragments.FragmentLogin;
 import com.example.ecoplastic.fragments.FragmentRegister;
 import com.example.ecoplastic.fragments.FragmentResultado;
 import com.example.ecoplastic.fragments.Fragment_CalculoHuella;
 
-public class MainActivity extends AppCompatActivity implements MainCallbacks{
+public class MainActivity extends AppCompatActivity implements MainCallbacks {
     private Fragment_CalculoHuella fragment_c;
     private FragmentResultado fragment_r;
     private FragmentBienvenida fragment_b = new FragmentBienvenida();
@@ -66,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements MainCallbacks{
         if (sender.equals("BIENVENIDO")) {
             try {
                 ft = getSupportFragmentManager().beginTransaction();
-                fragment_c = Fragment_CalculoHuella.newInstance("","");
+                fragment_c = Fragment_CalculoHuella.newInstance();
                 ft.replace(R.id.fragment_inicio, fragment_c);
                 ft.commit();
 

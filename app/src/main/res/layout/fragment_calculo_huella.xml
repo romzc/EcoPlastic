@@ -28,43 +28,17 @@
         android:gravity="center"
         android:text="¿Cuantos envaces de bebida consume a la semana?"
         android:textAlignment="center"
-        android:textColor="@color/green_light_2"
-        android:drawableLeft="@drawable/ic_bolsa"
+        android:textColor="@color/green_normal"
         android:paddingHorizontal="14dp"
         android:textSize="15dp" />
 
-    <LinearLayout
+
+    <com.example.ecoplastic.widgets.EditTextButtons
+        android:id="@+id/editTextNumber1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp"
-        android:gravity="center">
-
-        <Button
-            android:id="@+id/btn_minus1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/ic_minus"
-            app:backgroundTint="@null"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-        <EditText
-            android:id="@+id/editTextNumber1"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:background="@drawable/setshape"
-            android:inputType="number"
-            android:textAlignment="center"
-            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-        <Button
-            android:id="@+id/btn_plus1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/ic_plus"
-            app:backgroundTint="@null"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-    </LinearLayout>
+        android:layout_marginTop="8dp"
+        android:gravity="center" />
 
     <TextView
         android:layout_width="350dp"
@@ -75,43 +49,16 @@
         android:gravity="center"
         android:text="¿Cuantos envaces de botellas consume a la semana?"
         android:textAlignment="center"
-        android:textColor="@color/green_light_2"
-        android:drawableLeft="@drawable/ic_bolsa"
+        android:textColor="@color/green_normal"
         android:paddingHorizontal="15dp"
         android:textSize="15dp" />
-    <LinearLayout
+
+    <com.example.ecoplastic.widgets.EditTextButtons
+        android:id="@+id/editTextNumber2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp"
-        android:gravity="center">
-
-        <Button
-            android:id="@+id/btn_minus2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/ic_minus"
-            app:backgroundTint="@null"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-        <EditText
-            android:id="@+id/editTextNumber2"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:background="@drawable/setshape"
-            android:inputType="number"
-            android:textAlignment="center"
-            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-        <Button
-            android:id="@+id/btn_plus2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/ic_plus"
-            app:backgroundTint="@null"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-    </LinearLayout>
+        android:layout_marginTop="8dp"
+        android:gravity="center" />
 
     <TextView
         android:layout_width="350dp"
@@ -122,42 +69,16 @@
         android:gravity="center"
         android:text="¿Cuantos potes/envaces de comida consume a la semana?"
         android:textAlignment="center"
-        android:textColor="@color/green_light_2"
-        android:drawableLeft="@drawable/ic_bolsa"
+        android:textColor="@color/green_normal"
         android:paddingHorizontal="15dp"
         android:textSize="15dp" />
-    <LinearLayout
+
+    <com.example.ecoplastic.widgets.EditTextButtons
+        android:id="@+id/editTextNumber3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp"
-        android:gravity="center">
-
-        <Button
-            android:id="@+id/btn_minus3"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/ic_minus"
-            app:backgroundTint="@null"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-        <EditText
-            android:id="@+id/editTextNumber3"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:background="@drawable/setshape"
-            android:inputType="number"
-            android:textAlignment="center"
-            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-        <Button
-            android:id="@+id/btn_plus3"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/ic_plus"
-            app:backgroundTint="@null"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-    </LinearLayout>
+        android:layout_marginTop="8dp"
+        android:gravity="center" />
 
     <TextView
         android:layout_width="350dp"
@@ -168,42 +89,16 @@
         android:gravity="center"
         android:text="¿Cuantos potes/envaces de comida consume a la semana?"
         android:textAlignment="center"
-        android:textColor="@color/green_light_2"
-        android:drawableLeft="@drawable/ic_bolsa"
+        android:textColor="@color/green_normal"
         android:paddingHorizontal="15dp"
         android:textSize="15dp" />
-    <LinearLayout
+
+    <com.example.ecoplastic.widgets.EditTextButtons
+        android:id="@+id/editTextNumber4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp"
-        android:gravity="center">
-
-        <Button
-            android:id="@+id/btn_minus4"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/ic_minus"
-            app:backgroundTint="@null"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-        <EditText
-            android:id="@+id/editTextNumber4"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:background="@drawable/setshape"
-            android:inputType="number"
-            android:textAlignment="center"
-            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-        <Button
-            android:id="@+id/btn_plus4"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/ic_plus"
-            app:backgroundTint="@null"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-    </LinearLayout>
+        android:layout_marginTop="8dp"
+        android:gravity="center" />
 
     <Button
         android:id="@+id/btn_calcular"
@@ -212,7 +107,7 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/setshape"
         android:text="Calcular"
-        android:textColor="@color/green_light_2"
+        android:textColor="@color/green_normal"
         app:backgroundTint="@null" />
 
 </LinearLayout>

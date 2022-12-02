@@ -85,6 +85,7 @@ public class GraficoResultados extends View {
                 (medioY - cuartoY) - (altura * 5/100) + (altura * (4 - valorTotal) * 25/100),
                 mTextPaint);
     }
+
     public void setValue(int v){
         valorTotal = v;
     }
